@@ -1997,11 +1997,1489 @@ if (ussd == 111) {
             alert("Connection Problem or Invalid MMI Code")
           }
       } else if (plans == '3') {
-        alert("Plans3")
+        const weeklyPlan = prompt(
+        "Weekly Plan \n" +
+        "1 \u20A65000/18GB \n" +
+        "2 \u20A63000/10GB \n" +
+        "3 \u20A62500/6GB \n" +
+        "4 \u20A61500/5GB \n" +
+        "5 \u20A61000/1.5GB \n" +
+        "6 \u20A6800/1GB \n" +
+        "7 \u20A6500/500MB \n" +
+        "8 Monthly Plans \n" +
+        "9 \u20A65000/18GB \n" +
+        "22 Back\n" +
+        "0 Menu"  
+        )
+        if (weeklyPlan == "1") {
+              const price = 5000
+              const dataPlan18Gb = prompt(
+                "18GB @\u20A65000 + 2GB YT Night + 200MB YT,IG &Tiktok (7days) \n" +
+                "1 Buy & Auto Renew \n" +
+                "2 Buy Once \n" +
+                "3 Use SmartCash (10% cashback) \n" +
+                "4 Buy for Others \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (dataPlan18Gb == '1') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 18GB @\u20A65000 for 7days was successful. Your data plan will automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan18Gb == '2') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 18GB @\u20A65000 for 7days was successful. Your data plan will not automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan18Gb == '3') {
+                alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+              } else if (dataPlan18Gb == '4') {
+                const buyForFrnd = prompt (
+                  "Enter the Recipient MSISDN \n" +
+                  "22 Back \n" +
+                  "0 Menu"
+                )
+                if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                  const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                  )
+                  if (transfer.length == 4 && !isNaN(transfer)) {
+                    if (balance >= price) {
+                      alert(`Transfer of 18GB @\u20A65000 for 7days to ${buyForFrnd} was successful`)
+                    } else {
+                      alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                    }
+                  }  else {
+                    alert("Invalid Pin")
+                  }
+                } else if (buyForFrnd == '22') {
+                alert("Back")
+                } else if (buyForFrnd == '0') {
+                alert("Menu")
+                }
+                else {
+                  alert(`Invalid MSISDN`)
+                }
+              } else if (dataPlan18Gb == '22') { // back code remains
+                alert("Back")
+              } else if (dataPlan18Gb == '0') { // Menu code remains
+                alert("Menu")
+              } else {
+                alert("Connection Problem or Invalid MMI Code")
+              }
+        } else if (weeklyPlan == "2") {
+              const price = 3000
+              const dataPlan10Gb = prompt(
+                "10GB @\u20A63000 + 2GB YT Night + 200MB YT,IG &Tiktok (7days) \n" +
+                "1 Buy & Auto Renew \n" +
+                "2 Buy Once \n" +
+                "3 Use SmartCash (10% cashback) \n" +
+                "4 Buy for Others \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (dataPlan10Gb == '1') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 10GB @\u20A63000 for 7days was successful. Your data plan will automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan10Gb == '2') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 10GB @\u20A63000 for 7days was successful. Your data plan will not automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan10Gb == '3') {
+                alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+              } else if (dataPlan10Gb == '4') {
+                const buyForFrnd = prompt (
+                  "Enter the Recipient MSISDN \n" +
+                  "22 Back \n" +
+                  "0 Menu"
+                )
+                if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                  const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                  )
+                  if (transfer.length == 4 && !isNaN(transfer)) {
+                    if (balance >= price) {
+                      alert(`Transfer of 10GB @\u20A63000 for 7days to ${buyForFrnd} was successful`)
+                    } else {
+                      alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                    }
+                  }  else {
+                    alert("Invalid Pin")
+                  }
+                } else if (buyForFrnd == '22') {
+                alert("Back")
+                } else if (buyForFrnd == '0') {
+                alert("Menu")
+                }
+                else {
+                  alert(`Invalid MSISDN`)
+                }
+              } else if (dataPlan10Gb == '22') { // back code remains
+                alert("Back")
+              } else if (dataPlan10Gb == '0') { // Menu code remains
+                alert("Menu")
+              } else {
+                alert("Connection Problem or Invalid MMI Code")
+              }
+        } else if (weeklyPlan == "3") {
+              const price = 2500
+              const dataPlan2Gb = prompt(
+                "6GB @\u20A62500 + 2GB YT Night + 200MB YT,IG &Tiktok (2days) \n" +
+                "1 Buy & Auto Renew \n" +
+                "2 Buy Once \n" +
+                "3 Use SmartCash (10% cashback) \n" +
+                "4 Buy for Others \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (dataPlan2Gb == '1') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 6GB @\u20A62500 for 7days was successful. Your data plan will automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan2Gb == '2') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 6GB @\u20A62500 for 7days was successful. Your data plan will not automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan2Gb == '3') {
+                alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+              } else if (dataPlan2Gb == '4') {
+                const buyForFrnd = prompt (
+                  "Enter the Recipient MSISDN \n" +
+                  "22 Back \n" +
+                  "0 Menu"
+                )
+                if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                  const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                  )
+                  if (transfer.length == 4 && !isNaN(transfer)) {
+                    if (balance >= price) {
+                      alert(`Transfer of 6GB @\u20A62500 for 7days to ${buyForFrnd} was successful`)
+                    } else {
+                      alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                    }
+                  }  else {
+                    alert("Invalid Pin")
+                  }
+                } else if (buyForFrnd == '22') {
+                alert("Back")
+                } else if (buyForFrnd == '0') {
+                alert("Menu")
+                }
+                else {
+                  alert(`Invalid MSISDN`)
+                }
+              } else if (dataPlan2Gb == '22') { // back code remains
+                alert("Back")
+              } else if (dataPlan2Gb == '0') { // Menu code remains
+                alert("Menu")
+              } else {
+                alert("Connection Problem or Invalid MMI Code")
+              }
+        } else if (weeklyPlan == "4") {
+              const price = 1500
+              const dataPlan5Gb = prompt(
+                "5GB @\u20A61500 + 2GB YT Night + 200MB YT,IG &Tiktok (7days) \n" +
+                "1 Buy & Auto Renew \n" +
+                "2 Buy Once \n" +
+                "3 Use SmartCash (10% cashback) \n" +
+                "4 Buy for Others \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (dataPlan5Gb == '1') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 5GB @\u20A61500 for 7days was successful. Your data plan will automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan5Gb == '2') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 5GB @\u20A61500 for 7days was successful. Your data plan will not automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan5Gb == '3') {
+                alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+              } else if (dataPlan5Gb == '4') {
+                const buyForFrnd = prompt (
+                  "Enter the Recipient MSISDN \n" +
+                  "22 Back \n" +
+                  "0 Menu"
+                )
+                if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                  const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                  )
+                  if (transfer.length == 4 && !isNaN(transfer)) {
+                    if (balance >= price) {
+                      alert(`Transfer of 5GB @\u20A61500 for 7days to ${buyForFrnd} was successful`)
+                    } else {
+                      alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                    }
+                  }  else {
+                    alert("Invalid Pin")
+                  }
+                } else if (buyForFrnd == '22') {
+                alert("Back")
+                } else if (buyForFrnd == '0') {
+                alert("Menu")
+                }
+                else {
+                  alert(`Invalid MSISDN`)
+                }
+              } else if (dataPlan5Gb == '22') { // back code remains
+                alert("Back")
+              } else if (dataPlan5Gb == '0') { // Menu code remains
+                alert("Menu")
+              } else {
+                alert("Connection Problem or Invalid MMI Code")
+              }
+        } else if (weeklyPlan == "5") {
+              const price = 1000
+              const dataPln1_5Gb = prompt(
+                "1.5GB @\u20A61000 + 2GB YT Night + 200MB YT,IG &Tiktok (7days) \n" +
+                "1 Buy & Auto Renew \n" +
+                "2 Buy Once \n" +
+                "3 Use SmartCash (10% cashback) \n" +
+                "4 Buy for Others \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (dataPln1_5Gb == '1') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 1.5GB @\u20A61000 for 7days was successful. Your data plan will automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPln1_5Gb == '2') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 1.5GB @\u20A61000 for 7days was successful. Your data plan will not automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPln1_5Gb == '3') {
+                alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+              } else if (dataPln1_5Gb == '4') {
+                const buyForFrnd = prompt (
+                  "Enter the Recipient MSISDN \n" +
+                  "22 Back \n" +
+                  "0 Menu"
+                )
+                if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                  const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                  )
+                  if (transfer.length == 4 && !isNaN(transfer)) {
+                    if (balance >= price) {
+                      alert(`Transfer of 1.5GB @\u20A61000 for 7days to ${buyForFrnd} was successful`)
+                    } else {
+                      alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                    }
+                  }  else {
+                    alert("Invalid Pin")
+                  }
+                } else if (buyForFrnd == '22') {
+                alert("Back")
+                } else if (buyForFrnd == '0') {
+                alert("Menu")
+                }
+                else {
+                  alert(`Invalid MSISDN`)
+                }
+              } else if (dataPln1_5Gb == '22') { // back code remains
+                alert("Back")
+              } else if (dataPln1_5Gb == '0') { // Menu code remains
+                alert("Menu")
+              } else {
+                alert("Connection Problem or Invalid MMI Code")
+              }
+        } else if (weeklyPlan == "6") {
+              const price = 800
+              const dataPln1Gb = prompt(
+                "1GB Weekly @\u20A6800 (7days) \n" +
+                "1 Buy & Auto Renew \n" +
+                "2 Buy Once \n" +
+                "3 Use SmartCash (10% cashback) \n" +
+                "4 Buy for Others \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (dataPln1Gb == '1') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 1GB @\u20A6800 for 7days was successful. Your data plan will automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPln1Gb == '2') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 1GB @\u20A6800 for 7days was successful. Your data plan will not automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPln1Gb == '3') {
+                alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+              } else if (dataPln1Gb == '4') {
+                const buyForFrnd = prompt (
+                  "Enter the Recipient MSISDN \n" +
+                  "22 Back \n" +
+                  "0 Menu"
+                )
+                if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                  const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                  )
+                  if (transfer.length == 4 && !isNaN(transfer)) {
+                    if (balance >= price) {
+                      alert(`Transfer of 1GB @\u20A6800 for 7days to ${buyForFrnd} was successful`)
+                    } else {
+                      alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                    }
+                  }  else {
+                    alert("Invalid Pin")
+                  }
+                } else if (buyForFrnd == '22') {
+                alert("Back")
+                } else if (buyForFrnd == '0') {
+                alert("Menu")
+                }
+                else {
+                  alert(`Invalid MSISDN`)
+                }
+              } else if (dataPln1Gb == '22') { // back code remains
+                alert("Back")
+              } else if (dataPln1Gb == '0') { // Menu code remains
+                alert("Menu")
+              } else {
+                alert("Connection Problem or Invalid MMI Code")
+              }
+        } else if (weeklyPlan == "7") {
+              const price = 500
+              const dataPln500MB = prompt(
+                "500MB @\u20A6500 (7days) \n" +
+                "1 Buy & Auto Renew \n" +
+                "2 Buy Once \n" +
+                "3 Use SmartCash (10% cashback) \n" +
+                "4 Buy for Others \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (dataPln500MB == '1') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 500MB @\u20A6500 for 7days was successful. Your data plan will automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPln500MB == '2') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 500MB @\u20A6500 for 7days was successful. Your data plan will not automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPln500MB == '3') {
+                alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+              } else if (dataPln500MB == '4') {
+                const buyForFrnd = prompt (
+                  "Enter the Recipient MSISDN \n" +
+                  "22 Back \n" +
+                  "0 Menu"
+                )
+                if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                  const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                  )
+                  if (transfer.length == 4 && !isNaN(transfer)) {
+                    if (balance >= price) {
+                      alert(`Transfer of 500MB @\u20A6500 for 7days to ${buyForFrnd} was successful`)
+                    } else {
+                      alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                    }
+                  }  else {
+                    alert("Invalid Pin")
+                  }
+                } else if (buyForFrnd == '22') {
+                alert("Back")
+                } else if (buyForFrnd == '0') {
+                alert("Menu")
+                }
+                else {
+                  alert(`Invalid MSISDN`)
+                }
+              } else if (dataPln500MB == '22') { // back code remains
+                alert("Back")
+              } else if (dataPln500MB == '0') { // Menu code remains
+                alert("Menu")
+              } else {
+                alert("Connection Problem or Invalid MMI Code")
+              }
+        } else if (weeklyPlan == "8") {
+          const monthlyPlan = prompt(
+            "Monthly Plan \n" +
+            "1 \u20A61500/2GB \n" +
+            "2 \u20A61500/3GB \n" +
+            "3 \u20A62500/4GB \n" +
+            "4 \u20A63000/8GB \n" +
+            "5 \u20A64000/10GB \n" +
+            "6 \u20A65000/13GB \n" +
+            "7 \u20A66000/18GB \n" +
+            "8 \u20A68000/25GB \n" +
+            "22 Back \n" +
+            "0 Menu" 
+          ) 
+          if (monthlyPlan == "1") {
+            const price = 1500
+            const dataPlan2Gb = prompt(
+              "2GB @\u20A61500 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan2Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 2GB @\u20A61500 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan2Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 2GB @\u20A61500 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan2Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan2Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 2GB @\u20A61500 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan2Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan2Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "2") {
+            const price = 2000
+            const dataPlan3Gb = prompt(
+              "3GB @\u20A62000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan3Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 3GB @\u20A62000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan3Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 3GB @\u20A62000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan3Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan3Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 3GB @\u20A62000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan3Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan3Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "3") {
+            const price = 2500
+            const dataPlan4Gb = prompt(
+              "4GB @\u20A62500 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan4Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 4GB @\u20A62500 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan4Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 4GB @\u20A62500 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan4Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan4Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 4GB @\u20A62500 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan4Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan4Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "4") {
+            const price = 3000
+            const dataPlan8Gb = prompt(
+              "8GB @\u20A63000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan8Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 8GB @\u20A63000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan8Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 8GB @\u20A63000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan8Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan8Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 8GB @\u20A63000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan8Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan8Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "5") {
+            const price = 4000
+            const dataPlan10Gb = prompt(
+              "10GB @\u20A64000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan10Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 10GB @\u20A64000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan10Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 10GB @\u20A64000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan10Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan10Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 10GB @\u20A64000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan10Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan10Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "6") {
+            const price = 5000
+            const dataPlan13Gb = prompt(
+              "13GB @\u20A65000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan13Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 13GB @\u20A65000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan13Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 13GB @\u20A65000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan13Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan13Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 13GB @\u20A65000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan13Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan13Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "7") {
+            const price = 6000
+            const dataPlan18Gb = prompt(
+              "18GB @\u20A66000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan18Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 18GB @\u20A66000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan18Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 18GB @\u20A66000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan18Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan18Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 18GB @\u20A66000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan18Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan18Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "8") {
+            const price = 8000
+            const dataPlan3Gb = prompt(
+              "25GB @\u20A68000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan3Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 25GB @\u20A68000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan3Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 25GB @\u20A68000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan3Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan3Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 25GB @\u20A68000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan3Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan3Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "22") {
+            alert("Back")
+          } else if (monthlyPlan == "0") {
+            alert("Menu")
+          } else {
+            alert("Connection Problem or Invalid MMI Code")
+          }
+        } else if (weeklyPlan == "9") {
+              const price = 5000
+              const dataPlan18Gb = prompt(
+                "18GB @\u20A65000 + 2GB YT Night + 200MB YT,IG &Tiktok (7days) \n" +
+                "1 Buy & Auto Renew \n" +
+                "2 Buy Once \n" +
+                "3 Use SmartCash (10% cashback) \n" +
+                "4 Buy for Others \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (dataPlan18Gb == '1') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 18GB @\u20A65000 for 7days was successful. Your data plan will automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan18Gb == '2') {
+                if (balance >= price) { 
+                  alert("Dear Customer, your purchase of 18GB @\u20A65000 for 7days was successful. Your data plan will not automatically renew upon expiration")
+                } else {
+                  alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+                }
+              } else if (dataPlan18Gb == '3') {
+                alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+              } else if (dataPlan18Gb == '4') {
+                const buyForFrnd = prompt (
+                  "Enter the Recipient MSISDN \n" +
+                  "22 Back \n" +
+                  "0 Menu"
+                )
+                if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                  const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                  )
+                  if (transfer.length == 4 && !isNaN(transfer)) {
+                    if (balance >= price) {
+                      alert(`Transfer of 18GB @\u20A65000 for 7days to ${buyForFrnd} was successful`)
+                    } else {
+                      alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                    }
+                  }  else {
+                    alert("Invalid Pin")
+                  }
+                } else if (buyForFrnd == '22') {
+                alert("Back")
+                } else if (buyForFrnd == '0') {
+                alert("Menu")
+                }
+                else {
+                  alert(`Invalid MSISDN`)
+                }
+              } else if (dataPlan18Gb == '22') { // back code remains
+                alert("Back")
+              } else if (dataPlan18Gb == '0') { // Menu code remains
+                alert("Menu")
+              } else {
+                alert("Connection Problem or Invalid MMI Code")
+              }
+        } else if (weeklyPlan == "22") {
+            alert("Back")
+        } else if (weeklyPlan == "0") {
+            alert("Menu")
+        } else {
+            alert("Connection Problem or Invalid MMI Code")
+        }
       } else if (plans == '4') {
-        alert("Plans4")
+        const monthlyPlan = prompt(
+            "Monthly Plan \n" +
+            "1 \u20A61500/2GB \n" +
+            "2 \u20A61500/3GB \n" +
+            "3 \u20A62500/4GB \n" +
+            "4 \u20A63000/8GB \n" +
+            "5 \u20A64000/10GB \n" +
+            "6 \u20A65000/13GB \n" +
+            "7 \u20A66000/18GB \n" +
+            "8 \u20A68000/25GB \n" +
+            "22 Back \n" +
+            "0 Menu" 
+          )
+          if (monthlyPlan == "1") {
+            const price = 1500
+            const dataPlan2Gb = prompt(
+              "2GB @\u20A61500 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan2Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 2GB @\u20A61500 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan2Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 2GB @\u20A61500 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan2Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan2Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 2GB @\u20A61500 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan2Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan2Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "2") {
+            const price = 2000
+            const dataPlan3Gb = prompt(
+              "3GB @\u20A62000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan3Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 3GB @\u20A62000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan3Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 3GB @\u20A62000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan3Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan3Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 3GB @\u20A62000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan3Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan3Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "3") {
+            const price = 2500
+            const dataPlan4Gb = prompt(
+              "4GB @\u20A62500 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan4Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 4GB @\u20A62500 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan4Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 4GB @\u20A62500 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan4Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan4Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 4GB @\u20A62500 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan4Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan4Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "4") {
+            const price = 3000
+            const dataPlan8Gb = prompt(
+              "8GB @\u20A63000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan8Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 8GB @\u20A63000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan8Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 8GB @\u20A63000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan8Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan8Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 8GB @\u20A63000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan8Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan8Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "5") {
+            const price = 4000
+            const dataPlan10Gb = prompt(
+              "10GB @\u20A64000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan10Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 10GB @\u20A64000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan10Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 10GB @\u20A64000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan10Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan10Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 10GB @\u20A64000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan10Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan10Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "6") {
+            const price = 5000
+            const dataPlan13Gb = prompt(
+              "13GB @\u20A65000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan13Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 13GB @\u20A65000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan13Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 13GB @\u20A65000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan13Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan13Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 13GB @\u20A65000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan13Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan13Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "7") {
+            const price = 6000
+            const dataPlan18Gb = prompt(
+              "18GB @\u20A66000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan18Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 18GB @\u20A66000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan18Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 18GB @\u20A66000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan18Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan18Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 18GB @\u20A66000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan18Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan18Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "8") {
+            const price = 8000
+            const dataPlan3Gb = prompt(
+              "25GB @\u20A68000 + 2GB YT Night + 200MB YT,IG &Tiktok (30days) \n" +
+              "1 Buy & Auto Renew \n" +
+              "2 Buy Once \n" +
+              "3 Use SmartCash (10% cashback) \n" +
+              "4 Buy for Others \n" +
+              "22 Back \n" +
+              "0 Menu"
+            )
+            if (dataPlan3Gb == '1') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 25GB @\u20A68000 for 30days was successful. Your data plan will automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan3Gb == '2') {
+              if (balance >= price) { 
+                alert("Dear Customer, your purchase of 25GB @\u20A68000 for 30days was successful. Your data plan will not automatically renew upon expiration")
+              } else {
+                alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or Dial *303# to BORROW DATA and Pay Back Later")
+              }
+            } else if (dataPlan3Gb == '3') {
+              alert("Dear Customer, kindly dial *939# to open a SmartCash Wallet. Thank you. ")
+            } else if (dataPlan3Gb == '4') {
+              const buyForFrnd = prompt (
+                "Enter the Recipient MSISDN \n" +
+                "22 Back \n" +
+                "0 Menu"
+              )
+              if (buyForFrnd.length == 11 && !isNaN(buyForFrnd) && (buyForFrnd.startsWith("070") || buyForFrnd.startsWith("080") || buyForFrnd.startsWith("081") || buyForFrnd.startsWith("090") || buyForFrnd.startsWith("091"))) {
+                const transfer = prompt(`Enter pin to transfer to ${buyForFrnd} \n`
+                )
+                if (transfer.length == 4 && !isNaN(transfer)) {
+                  if (balance >= price) {
+                    alert(`Transfer of 25GB @\u20A68000 for 30days to ${buyForFrnd} was successful`)
+                  } else {
+                    alert("Dear Customer, you do not have sufficient airtime to buy this bundle.Please recharge and try again or *303# to BORROW DATA and Pay Back Later")
+                  }
+                }  else {
+                  alert("Invalid Pin")
+                }
+              } else if (buyForFrnd == '22') {
+              alert("Back")
+              } else if (buyForFrnd == '0') {
+              alert("Menu")
+              }
+              else {
+                alert(`Invalid MSISDN`)
+              }
+            } else if (dataPlan3Gb == '22') { // back code remains
+              alert("Back")
+            } else if (dataPlan3Gb == '0') { // Menu code remains
+              alert("Menu")
+            } else {
+              alert("Connection Problem or Invalid MMI Code")
+            }
+          } else if (monthlyPlan == "22") {
+            alert("Back")
+          } else if (monthlyPlan == "0") {
+            alert("Menu")
+          } else {
+            alert("Connection Problem or Invalid MMI Code")
+          }
       } else if (plans == '5') {
-        alert("Plans5")
+        const bigMonthly = prompt(
+          "Big Monthly Plans \n" +
+          "1 \u20A610000/35GB \n" +
+          "2 \u20A615000/60GB \n" +
+          "3 \u20A610000/100GB \n" +
+          "4 \u20A630000/160GB \n" +
+          "5 \u20A640000/210GB \n" +
+          "22 Back \n" +
+          "0 Menu" 
+        )
+        if (bigMonthly == "1") {
+          alert("35gb")
+        } else if (bigMonthly == "2") {
+          alert("60gb")
+        } else if (bigMonthly == "3") {
+          alert("100gb")
+        } else if (bigMonthly == "4") {
+          alert("160gb")
+        } else if (bigMonthly == "5") {
+          alert("210gb")
+        } else if (bigMonthly == "22") {
+          alert("Back")
+        } else if (bigMonthly == "0") {
+          alert("Menu")
+        } else {
+          alert("Connection Problem or Invalid MMI Code")
+        }
       } else if (plans == '6') {
         alert("Plans6")
       } else if (plans == '7') {
